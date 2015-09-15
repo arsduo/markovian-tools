@@ -7,4 +7,5 @@
 /pkg/
 /spec/reports/
 /tmp/
-data
+src/data
+.DS_Store

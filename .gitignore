@@ -9,3 +9,5 @@
 /tmp/
 src/data
 .DS_Store
+target
+data

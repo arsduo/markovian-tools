@@ -2,7 +2,7 @@ require 'twitter'
 require 'yaml'
 
 module Markovian
-  module Tools
+  module Publishers
     class TwitterConfig
       def twitter_client
         Twitter::REST::Client.new do |config|

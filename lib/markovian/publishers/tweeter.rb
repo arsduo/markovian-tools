@@ -1,7 +1,7 @@
-require 'markovian/tools/twitter_config'
+require 'markovian/publishers/twitter_config'
 
 module Markovian
-  module Tools
+  module Publishers
     # This class, given a Markovian chain object and a Twitter OAuth token, will tweet out a
     # randomly-generated tweet.
     class Tweeter

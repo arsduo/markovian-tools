@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in markovian-lambda.gemspec
+# Specify your gem's dependencies in markovian-tools.gemspec
 gemspec

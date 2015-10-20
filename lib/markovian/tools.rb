@@ -1,7 +1,7 @@
-require "markovian/lambda/version"
+require "markovian/tools/version"
 
 module Markovian
-  module Lambda
+  module Tools
     # Your code goes here...
   end
 end

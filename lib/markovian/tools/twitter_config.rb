@@ -2,7 +2,7 @@ require 'twitter'
 require 'yaml'
 
 module Markovian
-  module Lambda
+  module Tools
     class TwitterConfig
       def twitter_client
         Twitter::REST::Client.new do |config|
@@ -20,7 +20,7 @@ module Markovian
       end
 
       def twitter_credential_file_path
-        File.join(Lambda.root, "data/twitter_auth.yml")
+        File.join(Tools.root, "data/twitter_auth.yml")
       end
     end
   end

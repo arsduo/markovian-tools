@@ -1,17 +1,17 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'markovian/lambda/version'
+require 'markovian/tools/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "markovian-lambda"
-  spec.version       = Markovian::Lambda::VERSION
+  spec.name          = "markovian-tools"
+  spec.version       = Markovian::Tools::VERSION
   spec.authors       = ["Alex Koppel"]
   spec.email         = ["alex@alexkoppel.com"]
 
-  spec.summary       = %q{An AWS Lambda wrapper for the Markovian gem.}
+  spec.summary       = %q{An AWS Tools wrapper for the Markovian gem.}
   spec.description   = spec.summary
-  spec.homepage      = "https://github.com/arsduo/markovian-lambda"
+  spec.homepage      = "https://github.com/arsduo/markovian-tools"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }

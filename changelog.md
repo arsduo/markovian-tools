@@ -1,4 +1,4 @@
-markovian-lambda
+markovian-tools
 
 v0.0.1
 ======

@@ -1,15 +1,15 @@
-# Markovian::Lambda
+# Markovian::Tools
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/markovian/lambda`. To experiment with that code, run `bin/console` for an interactive prompt.
+A set of tools for using the Markovian Markov chain library.
 
-TODO: Delete this and the text above, and describe your gem
+Details to come!
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'markovian-lambda'
+gem 'markovian-tools'
 ```
 
 And then execute:
@@ -18,7 +18,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install markovian-lambda
+    $ gem install markovian-tools
 
 ## Usage
 
@@ -32,7 +32,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/markovian-lambda. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/markovian-tools. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
 
 ## License

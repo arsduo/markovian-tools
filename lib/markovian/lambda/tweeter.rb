@@ -2,19 +2,19 @@ require 'markovian/lambda/twitter_config'
 
 module Markovian
   module Lambda
-    # This class, given a Markovian corpus object and a Twitter OAuth token, will tweet out a
+    # This class, given a Markovian chain object and a Twitter OAuth token, will tweet out a
     # randomly-generated tweet.
     class Tweeter
       # We shouldn't start our tweets with @usernames. In the unlikely event we find ourselves unable to find an
       # appropriate starter word, throw an error.
       class UnableToFindAppropriateStarterWordError < StandardError; end
 
-      attr_reader :corpus
-      def initialize(corpus)
-        @corpus = corpus
+      attr_reader :chain
+      def initialize(chain)
+        @chain = chain
       end
 
-      def markovian_text(seed = corpus.random_word)
+      def markovian_text(seed = chain.random_word)
         text_builder.construct(seed, length: 140, start_result_with_seed: true)
       end
 
@@ -33,7 +33,7 @@ module Markovian
       # In the future, we'll have the ability to answer people, but for now, let's be careful.
       def appropriate_random_word
         (0...50).times do
-          word = corpus.random_word
+          word = chain.random_word
           return word unless word =~ /^\@/
         end
         raise UnableToFindAppropriateStarterWordError
@@ -44,7 +44,7 @@ module Markovian
       end
 
       def text_builder
-        TextBuilder.new(corpus)
+        TextBuilder.new(chain)
       end
     end
   end

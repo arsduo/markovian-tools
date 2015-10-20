@@ -5,6 +5,8 @@ require "markovian/publishers/tweeter"
 
 module Markovian
   module Tools
-    # Your code goes here...
+    def self.root
+      Gem::Specification.find_by_name("markovian-tools").gem_dir
+    end
   end
 end

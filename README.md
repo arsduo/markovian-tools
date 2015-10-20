@@ -22,7 +22,22 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Fuller documentation will come shortly. For now, let's see how we can use Markovian to build some tweets from a Twitter archive we've downloaded:
+
+```ruby
+> path = #{path_to_twitter_archive}
+ => path_to_twitter_archive
+> importer = Markovian::Tools::Importers::Twitter::CsvImporter.new(path)
+ => #<Markovian::Importers::Twitter::CsvImporter:0x007fd0ca3282a8 @path=path_to_twitter_archive>
+# now assemble the chain of tweets -- this may take a few seconds to compile
+> chain = importer.chain
+ => #<Markovian::Chain:0x007fd0ca03df70 ...>
+# Now, we can build some text!
+> Markovian::TextBuilder.new(chain).construct("markov")
+=> "markov chains a lot better than a month, i've been here half an hour of night when you can get behind belgium for the offline train journey"
+```
+
+Exactly!
 
 ## Development
 

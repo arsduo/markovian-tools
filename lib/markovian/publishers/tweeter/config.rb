@@ -6,7 +6,7 @@ module Markovian
     class Tweeter
       class Config
         def twitter_client
-          ::Twitter::REST::Client.new do |config|
+          Twitter::REST::Client.new do |config|
             config.consumer_key        = twitter_credentials["api_key"]
             config.consumer_secret     = twitter_credentials["api_secret"]
             config.access_token        = twitter_credentials["access_token"]

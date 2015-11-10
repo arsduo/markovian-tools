@@ -1,9 +1,9 @@
 require 'spec_helper'
-require 'markovian/importers/twitter/csv_importer'
+require 'markovian/importers/tweeter/csv_importer'
 
 module Markovian
   module Importers
-    module Twitter
+    module Tweeter
       RSpec.describe CsvImporter do
         let(:twitter_csv_path) { File.join(SPEC_ROOT, "fixtures/importers/twitter", "sample.csv")}
         let(:texts_in_csv) { [

@@ -1,9 +1,9 @@
 require 'spec_helper'
-require 'markovian/importers/twitter/tweet'
+require 'markovian/importers/tweeter/tweet'
 
 module Markovian
   module Importers
-    module Twitter
+    module Tweeter
       RSpec.describe Tweet do
         let(:text) { ".@arsduo check out http://foo.com/?abc%D=3 check it out on @github" }
         let(:tweet) { Tweet.new(text) }

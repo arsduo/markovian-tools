@@ -1,11 +1,11 @@
 require 'csv'
-require 'markovian/importers/twitter/tweet'
+require 'markovian/importers/tweeter/tweet'
 
 # This class will import a Twitter archive CSV, returning a set of tweets suitable for importation
 # into a Markovian chain.
 module Markovian
   module Importers
-    module Twitter
+    module Tweeter
       class CsvImporter
         attr_reader :path
         def initialize(path)

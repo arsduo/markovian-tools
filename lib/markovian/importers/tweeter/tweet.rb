@@ -1,6 +1,6 @@
 module Markovian
   module Importers
-    module Twitter
+    module Tweeter
       # Represents an individual tweet
       class Tweet
         attr_reader :text

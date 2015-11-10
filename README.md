@@ -27,7 +27,8 @@ Fuller documentation will come shortly. For now, let's see how we can use Markov
 ```ruby
 > path = #{path_to_twitter_archive}
  => path_to_twitter_archive
-> importer = Markovian::Tools::Importers::Twitter::CsvImporter.new(path)
+# Note: the Twitter namespace is called Tweeter to avoid conflicts with the Twitter gem.
+> importer = Markovian::Tools::Importers::Tweeter::CsvImporter.new(path)
  => #<Markovian::Importers::Twitter::CsvImporter:0x007fd0ca3282a8 @path=path_to_twitter_archive>
 # now assemble the chain of tweets -- this may take a few seconds to compile
 > chain = importer.chain

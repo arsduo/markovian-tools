@@ -1,9 +1,10 @@
-require 'markovian/publishers/twitter_config'
+require 'markovian/publishers/tweeter/config'
 
 module Markovian
   module Publishers
     # This class, given a Markovian chain object and a Twitter OAuth token, will tweet out a
     # randomly-generated tweet.
+    # Note: we call this Tweeter rather than Twitter to avoid conflict with the Twitter gem.
     class Tweeter
       # We shouldn't start our tweets with @usernames. In the unlikely event we find ourselves unable to find an
       # appropriate starter word, throw an error.
@@ -15,7 +16,7 @@ module Markovian
       end
 
       def markovian_text(seed = chain.random_word)
-        text_builder.construct(seed, length: 140, start_result_with_seed: true)
+        text_builder.construct(seed, length: 140)
       end
 
       def tweet!(text = markovian_text)
@@ -40,7 +41,7 @@ module Markovian
       end
 
       def twitter_client
-        TwitterConfig.new.twitter_client
+        Config.new.twitter_client
       end
 
       def text_builder

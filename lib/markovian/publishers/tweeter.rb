@@ -15,7 +15,7 @@ module Markovian
         @chain = chain
       end
 
-      def markovian_text(seed = chain.random_word)
+      def markovian_text(seed = appropriate_random_word)
         text_builder.construct(seed, length: 140)
       end
 
@@ -33,7 +33,7 @@ module Markovian
       # starter word that _isn't_ someone's name.
       # In the future, we'll have the ability to answer people, but for now, let's be careful.
       def appropriate_random_word
-        (0...50).times do
+        50.times do
           word = chain.random_word
           return word unless word =~ /^\@/
         end

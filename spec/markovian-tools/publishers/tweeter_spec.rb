@@ -14,6 +14,7 @@ module Markovian
 
       describe "#markovian_text" do
         let(:result) { double("result") }
+
         it "constructs a text with a random word by default" do
           allow(chain).to receive(:random_word).and_return(word)
           expect_any_instance_of(Markovian::TextBuilder).to receive(:construct).with(word, length: 140) do |instance|
@@ -21,6 +22,17 @@ module Markovian
             result
           end
           expect(tweeter.markovian_text).to eq(result)
+        end
+
+        it "rejects words that start with @" do
+          allow(chain).to receive(:random_word).and_return("@foo", word)
+          expect_any_instance_of(Markovian::TextBuilder).to receive(:construct).with(word, anything).and_return(result)
+          expect(tweeter.markovian_text).to eq(result)
+        end
+
+        it "throws an error if it can't find an appropriate word after 50 random tries" do
+          allow(chain).to receive(:random_word).and_return("@foo")
+          expect { tweeter.markovian_text }.to raise_exception(Tweeter::UnableToFindAppropriateStarterWordError)
         end
 
         it "will accept other words" do

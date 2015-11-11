@@ -3,7 +3,7 @@ CodeClimate::TestReporter.start
 
 require 'rspec'
 require 'faker'
-require 'markovian'
+require 'markovian/tools'
 
 SPEC_ROOT = File.dirname(__FILE__)
 

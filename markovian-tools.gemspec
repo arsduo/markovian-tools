@@ -21,6 +21,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency     "markovian"
   spec.add_runtime_dependency     "twitter"
+  spec.add_runtime_dependency     "koala"
   spec.add_runtime_dependency     "warbler"
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"

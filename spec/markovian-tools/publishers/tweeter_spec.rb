@@ -9,7 +9,7 @@ module Markovian
       let(:twitter_client) { double(Twitter::Client) }
 
       before :each do
-        allow_any_instance_of(Tweeter::Config).to receive(:twitter_client).and_return(twitter_client)
+        allow_any_instance_of(Tools::TwitterConfig).to receive(:twitter_client).and_return(twitter_client)
       end
 
       describe "#markovian_text" do

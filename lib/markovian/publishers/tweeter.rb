@@ -1,4 +1,4 @@
-require 'markovian/publishers/tweeter/config'
+require 'markovian/tools/twitter_config'
 
 module Markovian
   module Publishers
@@ -41,7 +41,7 @@ module Markovian
       end
 
       def twitter_client
-        Config.new.twitter_client
+        Tools::TwitterConfig.new.twitter_client
       end
 
       def text_builder

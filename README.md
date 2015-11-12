@@ -1,3 +1,7 @@
+[![Code Climate](https://codeclimate.com/github/arsduo/markovian-tools/badges/gpa.svg)](https://codeclimate.com/github/arsduo/markovian-tools)
+[![Test Coverage](https://codeclimate.com/github/arsduo/markovian-tools/badges/coverage.svg)](https://codeclimate.com/github/arsduo/markovian-tools/coverage)
+[![Build Status](https://travis-ci.org/arsduo/markovian-tools.svg)](https://travis-ci.org/arsduo/markovian-tools)
+
 # Markovian::Tools
 
 A set of tools for using the Markovian Markov chain library.

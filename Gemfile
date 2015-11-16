@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gemspec
 
 group :development, :test do
+  gem "rubocop"
   gem "byebug", platform: :mri
   # If you're developing both gems, use the local version of Markovian
   if File.exist?("../markovian")

@@ -1,8 +1,12 @@
 require 'markovian'
 require "markovian/tools/version"
+#
+# Twitter
 require "markovian/importers/tweeter/csv_importer"
 require "markovian/publishers/tweeter"
-require "markovian/tools/facebook_config"
+
+# Facebook
+require "markovian/importers/facebook/api_data_downloader"
 
 module Markovian
   module Tools

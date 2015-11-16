@@ -1,5 +1,11 @@
 markovian-tools
 
+v0.2.0
+======
+
+* Add complete spec coverage
+* Add Facebook API data importer
+
 v0.1.0
 ======
 

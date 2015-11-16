@@ -22,7 +22,7 @@ module Markovian
         protected
 
         def read_pages
-          while current_page = get_earlier_posts
+          while (current_page = get_earlier_posts)
             current_page.each do |post|
               output_file.puts(post.to_json)
             end
@@ -32,10 +32,10 @@ module Markovian
         end
 
         def get_earlier_posts
-          @page = if @page
-            @page.next_page
+          if @page
+            @page = @page.next_page
           else
-            api.get_connection("me", "feed")
+            @page = api.get_connection("me", "feed")
           end
         end
 

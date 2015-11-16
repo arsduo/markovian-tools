@@ -1,0 +1,15 @@
+---
+engines:
+  fixme:
+    enabled: true
+  rubocop:
+    enabled: true
+    checks:
+      # We're not in Rails.
+      Rubocop/Rails/Output:
+        enabled: false
+ratings:
+  paths:
+  - "**.rb"
+exclude_paths:
+- spec/**/*

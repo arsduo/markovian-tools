@@ -8,6 +8,10 @@ module Markovian
         Koala::Facebook::API.new(facebook_credentials["access_token"])
       end
 
+      def user_id
+        facebook_credentials["user_id"]
+      end
+
       protected
 
       def facebook_credentials

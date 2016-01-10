@@ -7,6 +7,7 @@ require "markovian/publishers/tweeter"
 
 # Facebook
 require "markovian/importers/facebook/api_data_downloader"
+require "markovian/importers/facebook/json_importer"
 
 module Markovian
   module Tools

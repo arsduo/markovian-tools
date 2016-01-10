@@ -98,5 +98,13 @@ RSpec.configure do |config|
       example.run
     end
   end
+
+  config.before :each, :auth_data do
+    # Use the auth data in the fixtures directory, not real auth files
+    root = Markovian::Tools.root
+    allow(Markovian::Tools).to receive(:root).and_return(
+      File.join(root, "spec/fixtures/")
+    )
+  end
 end
 

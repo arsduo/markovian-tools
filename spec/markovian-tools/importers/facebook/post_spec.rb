@@ -3,9 +3,14 @@ require 'spec_helper'
 module Markovian
   module Importers
     module Facebook
-      RSpec.describe Post do
+      RSpec.describe Post, :auth_data do
         # data is defined below cause it's crazy long
-        let(:post) { Post.new(data)  }
+        let(:post) { Post.new(data) }
+
+        before :each do
+          allow_any_instance_of(Tools::FacebookConfig).to receive(:user_id).and_return(2905623)
+        end
+
 
         describe "#interesting_texts" do
           it "returns the interesting texts and comments" do

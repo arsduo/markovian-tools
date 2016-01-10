@@ -3,9 +3,13 @@ require 'spec_helper'
 module Markovian
   module Importers
     module Facebook
-      RSpec.describe JsonImporter do
+      RSpec.describe JsonImporter, :auth_data do
         let(:facebook_csv_path) { File.join(SPEC_ROOT, "fixtures/importers/facebook", "sample.json")}
         let(:importer) { JsonImporter.new(facebook_csv_path) }
+
+        before :each do
+          allow_any_instance_of(Tools::FacebookConfig).to receive(:user_id).and_return(2905623)
+        end
 
         describe "#texts_for_markov_analysis" do
           it "collects the right texts, including comments" do

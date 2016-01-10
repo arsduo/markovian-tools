@@ -42,7 +42,11 @@ module Markovian
 
             it "incorporates the data into the existing chain", temporary_srand: 2 do
               importer.add_text_to_chain
-              expect(3.times.map { chain.next_word("stained") }).to eq(["clothes", "glass", "glass"])
+              if RUBY_PLATFORM == "java"
+                expect(3.times.map { chain.next_word("stained") }).to eq(["clothes", "clothes", "glass"])
+              else
+                expect(3.times.map { chain.next_word("stained") }).to eq(["clothes", "glass", "glass"])
+              end
             end
           end
         end
